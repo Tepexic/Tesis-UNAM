@@ -1,0 +1,20 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           Capítulo 2: MARCO TEÓRICO - REVISIÓN DE LITERATURA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Marco teórico}
+En este capítulo, normalmete se ponen todas las ecuaciones que se van a usar en la tesis, así ya nomás se hace rferencia a la ecuación tal o "como se vió en el capítulo 2", y esas cosas.
+%inserción de codigo de Matlab
+%Es conveniente sangrarlo (los de proteco dicen "indentarlo") para que no se encime con los números  de las líneas a la izquierda
+\begin{lstlisting}[frame=single]
+    % Declaracion de las variables simbolicas
+    syms u z1 z2 z3 z4 J m M g l 
+    % Matrices involucradas
+    E = [J+m*l*l m*l*cos(z1);m*l*cos(z1) M+m] 
+    F = [m*g*l*sin(z1);u+m*l*(z3*z3)*sin(z1)] 
+    % Despeje
+    V = E\F
+\end{lstlisting}
+
+\blindtext
