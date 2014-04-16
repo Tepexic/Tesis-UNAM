@@ -323,7 +323,7 @@
         \colorvrule{Oro}{1pt}{13cm}\\[10pt]
         \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fi_azul}
     \else
-        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro}\\[10pt]
+        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}\\[10pt]
         \hskip2pt\vrule width2.5pt height13cm
         \hskip1mm
         \vrule width1pt height13cm\\[10pt]
