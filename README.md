@@ -44,17 +44,22 @@ Por el momento, sólo funciona si compilan con "PDFLaTeX", aún no tiene funcion
 Opciones para el posgrado
 --------
 Para empezar, se debe tener el comando
+
     \posgradotrue
-    
+
 La portada tiene dos nuevos elementos: programa y campo, rellenar al gusto
+
     \programa{Programa de Maestría y Doctorado en Ingeniería}
     \campo{Ingeniería Eléctrica - Control}
     
 El siguiente comando activa la opción de poner hasta dos tutores que conformen el comité tutor
+
     \comitetrue
     \ctutoruno{Nombre 1}
     \ctutoruno{Nombre 2}
+    
 Para los datos del jurado asignado, se tiene
+
     \presidente{Nombre}
     \secretario{Nombre}
     \vocal{Nombre}
