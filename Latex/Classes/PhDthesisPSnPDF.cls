@@ -23,7 +23,7 @@
 \usepackage[utf8]{inputenc}              % CODIFICACIÓN UTF8, PARA Ñs Y ACENTOS Y DEMÁS
 \usepackage{listings}                    % PERMITE AGREGAR CÓDIGO DE LENGUAJES  DE PROGRAMACIÓN (DOCUMENTACIÓN EN GOOGLE)
 \usepackage{emptypage}                   % QUITA LOS ENCABEZADOS Y PIES DE PÁGINA EN LAS HOJAS VACÍAS PRODUCIDAS POR LA IMPRESIÓN A DOS CARAS
-%\usepackage{wrapfig}                    % to include figure with text wrapping around it
+\usepackage{wrapfig}                    % to include figure with text wrapping around it
 \usepackage[margin=10pt,font=small,labelfont=bf]{caption} % for improved layout of figure captions with extra margin, smaller font than text
 \usepackage[bf,SL,BF]{subfigure}         % Permite crear figuras múltiples
 \usepackage{makeidx}                     % Contiene los macros para indexar en un glosario
@@ -34,6 +34,7 @@
 \usepackage{fancyhdr}                    % for better header layout
 \usepackage{eucal}
 \usepackage[spanish,mexico]{babel}
+\usepackage{float}
 \usepackage{color}
 \usepackage[perpage]{footmisc}
 \usepackage[round, sort, numbers]{natbib}
@@ -66,12 +67,12 @@
 
 
 %:-------------------------- Glossary/Abbrev./Symbols -----------------------
-\usepackage[intoc]{nomencl} % load nomencl extension; include in TOC
+%\usepackage[intoc]{nomencl} % load nomencl extension; include in TOC
 %\nomrefpage % to include page numbers after abbrevations
-\renewcommand{\nomname}{Glossary} % rename nomenclature
-\renewcommand{\nomlabel}[1]{\textbf{#1}} % make abbreviations bold
-\makenomenclature % used to be \makeglossary
-\newcommand{\g}{\footnote{For all abbreviations see the glossary on page \pageref{nom}.}} % type "\g" to refer to glossary
+%\renewcommand{\nomname}{Glossary} % rename nomenclature
+%\renewcommand{\nomlabel}[1]{\textbf{#1}} % make abbreviations bold
+%\makenomenclature % used to be \makeglossary
+%\newcommand{\g}{\footnote{For all abbreviations see the glossary on page \pageref{nom}.}} % type "\g" to refer to glossary
 
 % used to be for sorting into categories:
 %\renewcommand\nomgroup[1]{%
@@ -276,6 +277,26 @@
 %Definiendo al director de tesis:
 \newcommand{\@director}{}
 \newcommand{\director}[1]{\renewcommand{\@director}{#1}}
+\newcommand{\@ctutoruno}{}
+\newcommand{\ctutoruno}[1]{\renewcommand{\@ctutoruno}{#1}}
+\newcommand{\@ctutordos}{}
+\newcommand{\ctutordos}[1]{\renewcommand{\@ctutordos}{#1}}
+\newcommand{\@presidente}{}
+\newcommand{\presidente}[1]{\renewcommand{\@presidente}{#1}}
+\newcommand{\@vocal}{}
+\newcommand{\vocal}[1]{\renewcommand{\@vocal}{#1}}
+\newcommand{\@supuno}{}
+\newcommand{\supuno}[1]{\renewcommand{\@supuno}{#1}}
+\newcommand{\@supdos}{}
+\newcommand{\supdos}[1]{\renewcommand{\@supdos}{#1}}
+\newcommand{\@secretario}{}
+\newcommand{\secretario}[1]{\renewcommand{\@secretario}{#1}}
+\newcommand{\@institucion}{}
+\newcommand{\institucion}[1]{\renewcommand{\@institucion}{#1}}
+\newcommand{\@programa}{}
+\newcommand{\programa}[1]{\renewcommand{\@programa}{#1}}
+\newcommand{\@campo}{}
+\newcommand{\campo}[1]{\renewcommand{\@campo}{#1}}
 
 %Definiendo el lugar
 \newcommand{\@lugar}{}
@@ -283,6 +304,9 @@
 
 %Definiendo la portada
 \newif\ifportada
+\newif\ifposgrado
+\newif\ifcomite
+
 
 % Submission Text
 \newcommand{\submissiontext}{This dissertation is submitted for the degree of }
@@ -309,84 +333,150 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\maketitle}{%
-\begin{alwayssingle}
-\begin{center}
-\thispagestyle{empty}
-%% Barra izquierda - Escudos
-\hskip -2cm
-\begin{minipage}[c][10cm][s]{3cm}
-  \begin{center}
-    \ifportada
-        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[10pt]
-        \hskip2pt\colorvrule{Azul}{2.5pt}{13cm}
-        \hskip -0.4mm
-        \colorvrule{Oro}{1pt}{13cm}\\[10pt]
-        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fi_azul}
-    \else
-        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}\\[10pt]
-        \hskip2pt\vrule width2.5pt height13cm
-        \hskip1mm
-        \vrule width1pt height13cm\\[10pt]
-        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fi_negro}
-    \fi
+\ifposgrado
+	\begin{alwayssingle}
+	\thispagestyle{empty}	
+	\begin{center}
+	\includegraphics[height=3cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[8mm]
+	{\bfseries UNIVERSIDAD~NACIONAL~AUTÓNOMA~DE~MÉXICO}\\
+	{\MakeUppercase {\@programa}}\\
+	{\MakeUppercase {\@campo}}\\[20mm]
+	{\Large \scshape {\@title}} \\[20mm]
+	TESIS\\
+	QUE PARA OPTAR POR EL GRADO DE:\\
+	{\Large \scshape {\@degree}}\\[20mm]
+	PRESENTA:\\
+	{\Large \scshape {\@author}}\\[18mm]
+	TUTOR PRINCIPAL\\
+	{\Large \scshape {\@director}}\\
+	\ifcomite
+		COMITÉ TUTOR\\
+		{\Large \scshape {\@ctutoruno}}\\
+		{\Large \scshape {\@ctutordos}}\\[10mm]
+		{\MakeUppercase {\@lugar}}{, }{\MakeUppercase {\@degreedate}}
+	\else
+		\vspace{20mm}
+		{\MakeUppercase {\@lugar}}{, }{\MakeUppercase {\@degreedate}}
+	\fi	
+	\end{center}
+	\end{alwayssingle}
+	
+	\newpage
+	\thispagestyle{empty}~
+	
+		
+	\newpage
+	\begin{alwayssingle}
+	\thispagestyle{empty}
+	\vspace{30mm}
+
+	\noindent JURADO ASIGNADO:
+	\vspace{8mm}
+
+	\begin{tabbing}
+	Presidente: \ \ \ \ \ \ \ \= {\@presidente}\\ [3mm]
+	Secretario: \> {\@secretario}\\ [3mm]
+	Vocal: \> {\@vocal}\\ [3mm]
+	1er. Suplente: \> {\@supuno}\\ [3mm]
+	2o. Suplente: \> {\@supdos}\\ [12mm]
+	\end{tabbing}
+	La tesis se realizó en {\@institucion}.
+	\vspace{15mm}
+
+	\begin{center}
+	TUTOR DE TESIS:\\[4mm]
+	{\@director}\\[20mm]
+	---------------------------------------------------------\\
+	\end{center}
+	%\newpage
+	\vfill
+	\end{alwayssingle}
+	
+
+\else
+	\begin{alwayssingle}
+	\begin{center}
+	\thispagestyle{empty}
+	%% Barra izquierda - Escudos
+	\hskip -2cm
+	\begin{minipage}[c][10cm][s]{3cm}
+	  \begin{center}
+	    \ifportada
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[10pt]
+    	    \hskip2pt\colorvrule{Azul}{2.5pt}{13cm}
+        	\hskip -0.4mm
+	        \colorvrule{Oro}{1pt}{13cm}\\[10pt]
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fi_azul}
+	    \else
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}\\[10pt]
+	        \hskip2pt\vrule width2.5pt height13cm
+    	    \hskip1mm
+	        \vrule width1pt height13cm\\[10pt]
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fi_negro}
+	    \fi
     
-  \end{center}
-\end{minipage}\quad
-%% Barra derecha - Títulos
-\begin{minipage}[c][9.5cm][s]{11cm}
-  \begin{center}
-    % Barra superior
-    {\large \scshape Universidad Nacional Autónoma de México}
-    \vspace{.3cm}
-    \ifportada
-        %\hrule height2.5pt
-        \colorhrule{Azul}{2.5pt}
-        \vspace{.1cm}
-        %\hrule height1pt
-        \colorhrule{Oro}{1pt}
-    \else
-        \hrule height2.5pt
-        \vspace{.1cm}
-        \hrule height1pt
-    \fi
-    \vspace{.3cm}
-    {\scshape  Facultad de Ingeniería}
+	  \end{center}
+	\end{minipage}\quad
+	%% Barra derecha - Títulos
+	\begin{minipage}[c][9.5cm][s]{11cm}
+	  \begin{center}
+    	% Barra superior
+	    {\large \scshape Universidad Nacional Autónoma de México}
+    	\vspace{.3cm}
+	    \ifportada
+        	%\hrule height2.5pt
+    	    \colorhrule{Azul}{2.5pt}
+	        \vspace{.1cm}
+        	%\hrule height1pt
+    	    \colorhrule{Oro}{1pt}
+	    \else
+       	 	\hrule height2.5pt
+        	\vspace{.1cm}
+       	 	\hrule height1pt
+    	\fi
+    	\vspace{.3cm}
+    	{\scshape  FACULTAD DE INGENIERÍA}
 
-    \vspace{.3cm}
+    	\vspace{.3cm}
 
 
-    % Título del trabajo
-    \vspace{3cm}
+	    % Título del trabajo
+    	%\vspace{3cm}
+		\vspace{2.5cm}	
+	
+    	{\Large \scshape {\@title}}
 
-    {\Large \scshape {\@title}}
+	    \vspace{3cm}
 
-    \vspace{3cm}
+	    % Tipo de trabajo
+	    \makebox[8cm][s]{\Huge T E S I S}\\[8pt]
+	    QUE PARA OPTAR POR EL GRADO DE:\\[5pt]
+    	\textbf{{\@degree}}\\[40pt]
+	    PRESENTA:\\[5pt]
+	    \textbf{{\@author}}
 
-    % Tipo de trabajo
-    \makebox[8cm][s]{\Huge T E S I S}\\[8pt]
-    QUE PARA OBTENER EL TÍTULO DE:\\[5pt]
-    \textbf{{\@degree}}\\[40pt]
-    PRESENTA:\\[5pt]
-    \textbf{{\@author}}
+	    \vspace{1.5cm}
 
-    \vspace{2cm}
+    	{\small TUTOR:\\ {\@director}}
 
-    {\small DIRECTOR DE TESIS:\\ {\@director}}
+	    \vspace{0.5cm}
 
-    \vspace{0.5cm}
+    	%{\small CODIRECTOR DE TESIS:\\ en caso de que aplique}
 
-    %{\small CODIRECTOR DE TESIS:\\ en caso de que aplique}
+	    \vspace{1cm}
 
-    \vspace{1.5cm}
+	    {\@lugar}{, }{\@degreedate}
 
-    {\@lugar}{, }{\@degreedate}
+	  \end{center}
+	\end{minipage}
 
-  \end{center}
-\end{minipage}
+	\end{center}
+	\null\vfill
+	\end{alwayssingle}
+	\fi
+	}
+	
 
-\end{center}
-\null\vfill
-\end{alwayssingle}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
