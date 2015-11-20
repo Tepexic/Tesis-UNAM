@@ -41,7 +41,28 @@ Compilación
 
 Por el momento, sólo funciona si compilan con "PDFLaTeX", aún no tiene funcionalidad completa con otros compiladores.
 
-
+Opciones para el posgrado
+--------
+Para empezar, se debe tener el comando
+    \posgradotrue
+    
+La portada tiene dos nuevos elementos: programa y campo, rellenar al gusto
+    \programa{Programa de Maestría y Doctorado en Ingeniería}
+    \campo{Ingeniería Eléctrica - Control}
+    
+El siguiente comando activa la opción de poner hasta dos tutores que conformen el comité tutor
+    \comitetrue
+    \ctutoruno{Nombre 1}
+    \ctutoruno{Nombre 2}
+Para los datos del jurado asignado, se tiene
+    \presidente{Nombre}
+    \secretario{Nombre}
+    \vocal{Nombre}
+    \supuno{Suplente 1}
+    \supdos{Suplente 2}
+    \institucion{el lugar donde se hizo la tesis}
+    
+    
 Warnings
 --------
 Marca varias advertencias al compilar, varias de ellas tienen que ver con que el paquete Blindtext no tiene funcionalidad para la lengua española, este paquete únicamente se usa para rellenar la plantilla con texto de ejemplo, por lo que al remover los comandos \blindtext se corrige.
