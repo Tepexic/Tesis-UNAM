@@ -37,7 +37,6 @@
 \usepackage{float}
 \usepackage{color}
 \usepackage[perpage]{footmisc}
-\usepackage[round, sort, numbers]{natbib}
 \usepackage{ifthen}
 \usepackage{multicol} % for pages with multiple text columns, e.g. References
 \setlength{\columnsep}{20pt} % space between columns; default 10pt quite narrow
@@ -151,7 +150,7 @@
                  colorlinks = true,
                  linkcolor = blue,
                  urlcolor  = blue,
-                 citecolor = red,
+                 citecolor = Azul,
                  anchorcolor = green,
                  hyperindex = true,
                  hyperfigures
@@ -260,16 +259,14 @@
 \newcommand{\dept}[1]{\renewcommand{\@dept}{#1}}
 
 % The name of your college (eg. King's)
-\newcommand{\@college}{}
-\newcommand{\college}[1]{\renewcommand{\@college}{#1}}
+\newcommand{\@facultad}{}
+\newcommand{\facultad}[1]{\renewcommand{\@facultad}{#1}}
 
 % The name of your University
 \newcommand{\@university}{}
 \newcommand{\university}[1]{\renewcommand{\@university}{#1}}
 
-% Defining the crest
-\newcommand{\@escudouniversidad}{}
-\newcommand{\escudouniversidad}[1]{\renewcommand{\@escudouniversidad}{#1}}
+
 
 \newcommand{\@escudofacultad}{}
 \newcommand{\escudofacultad}[1]{\renewcommand{\@escudofacultad}{#1}}
@@ -306,6 +303,8 @@
 \newif\ifportada
 \newif\ifposgrado
 \newif\ifcomite
+
+
 
 
 % Submission Text
@@ -406,13 +405,13 @@
     	    \hskip2pt\colorvrule{Azul}{2.5pt}{13cm}
         	\hskip -0.4mm
 	        \colorvrule{Oro}{1pt}{13cm}\\[10pt]
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fi_azul}
+	        \includegraphics[height=2.6cm]{\@escudofacultad}
 	    \else
 	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}\\[10pt]
 	        \hskip2pt\vrule width2.5pt height13cm
     	    \hskip1mm
 	        \vrule width1pt height13cm\\[10pt]
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/fi_negro}
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}
 	    \fi
     
 	  \end{center}
@@ -435,7 +434,7 @@
        	 	\hrule height1pt
     	\fi
     	\vspace{.3cm}
-    	{\scshape  FACULTAD DE INGENIERÍA}
+    	{\scshape  \@facultad}
 
     	\vspace{.3cm}
 
