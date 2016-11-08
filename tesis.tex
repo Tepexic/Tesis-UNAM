@@ -8,45 +8,60 @@
 
 %                     Under GNU License v3
 
-% ADAPTADO PARA FI-UNAM:  Jesús Velázquez y Marco Ruiz
+% ADAPTADO PARA FI-UNAM:  @Tepexic
 
 \documentclass[twoside,11pt]{Latex/Classes/PhDthesisPSnPDF}
 %         PUEDEN INCLUIR EN ESTE ESPACIO LOS PAQUETES EXTRA, O BIEN, EN EL ARCHIVO "PhDthesisPSnPDF.cls" EN "./Latex/Classes/"
 \usepackage{blindtext}                        % Para insertar texto dummy, de ejemplo, pues.
+\usepackage[round, sort, numbers]{natbib}  % Personalizar la bibliografía a gusto de cada quien
 % Note:
 % The \blindtext or \Blindtext commands throughout this template generate dummy text
 % to fill the template out. These commands should all be removed when 
 % writing thesis content.
 \include{Latex/Macros/MacroFile1}           % Archivo con funciones útiles
 
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                   DATOS                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Título de la tesis}
-\author{Nombres Apellido1 Apellido2}        
-\degree{Ingeniero en Carrera}               % Carrera
+\author{Nombres Apellido1 Apellido2} 
+\facultad{Facultad de Algunacosa}                 % Nombre de la facultad/escuela
+\escudofacultad{Latex/Classes/Escudos/fi_azul} % Aquí ponen la ruta y nombre del escudo de su facultad, actualmente, la carpeta Latex/Classes/Escudos cuenta con los siguientes escudos:
+% "fi_azul" Facultad de ingenieria en color azul
+% "fi_negro" Facultad de ingenieria en color negro
+% "fc_azul" Facultad de ciencias en color azul
+% "fc_negro" Facultad de ciencias en color negro
+% Se agradecen sus aportaciones de escudos a jebus.velazquez@gmail.com
+
+\degree{Ingenierx/Licenciadx en Algo}        % Carrera
 \director{Dr. Emmet L. Brown}               % Director de tesis
 \degreedate{2112}                           % Año de la fecha del examen
-\lugar{México, D.F.}                        % Lugar
+\lugar{Ciudad de México}                        % Lugar
+
 %\portadafalse                              % Portada en NEGRO, descomentar y comentar la línea siguiente si se quiere utilizar
 \portadatrue                                % Portada en COLOR
 
-%% Opciones del posgrado (descomentar si las necesitan)
-%\posgradotrue                                                    
-%\programa{programa de maestría y doctorado en ingeniería}
-%\campo{Ingeniería Eléctrica - Control}
-%% En caso de que haya comité tutor
-%\comitetrue
-%\ctutoruno{Dr. Emmet L. Brown}
-%\ctutordos{Dr. El Doctor}
 
-% % Datos del jurado                             
-%\presidente{Dr. 1}
-%\secretario{Dr. 2}
-%\vocal{Dr. 3}
-%\supuno{Dr. 4}
-%\supdos{Dr. 5}
-%\institucion{el Instituto de Ingeniería, UNAM}
+
+%% Opciones del posgrado (descomentar si las necesitan)
+	%\posgradotrue                                                    
+	%\programa{programa de maestría y doctorado en ingeniería}
+	%\campo{Ingeniería Eléctrica - Control}
+	%% En caso de que haya comité tutor
+	%\comitetrue
+	%\ctutoruno{Dr. Emmet L. Brown}
+	%\ctutordos{Dr. El Doctor}
+%% Datos del jurado                             
+	%\presidente{Dr. 1}
+	%\secretario{Dr. 2}
+	%\vocal{Dr. 3}
+	%\supuno{Dr. 4}
+	%\supdos{Dr. 5}
+	%\institucion{el Instituto de Ingeniería, UNAM}
 
 \keywords{tesis,autor,tutor,etc}            % Palablas clave para los metadatos del PDF
 \subject{tema_1,tema_2}                     % Tema para metadatos del PDF  
