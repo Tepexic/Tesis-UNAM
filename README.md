@@ -1,15 +1,13 @@
-Tesis FI UNAM
+Tesis UNAM
 =============
 
-Plantilla de Tesis en LaTeX para la Facultad de Ingeniería de la UNAM.
+Plantilla de Tesis en LaTeX para las facultades de la UNAM.
 
-UNAM's College of Engineering Thesis' LaTeX template.
+UNAM's Thesis' LaTeX template.
 
 Based on Harish Bhanderi's PhD/MPhil template, then Uni Cambridge (http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/).
 Corrected and extended in 2007 by Jakob Suckale, then MPI-iCBG PhD programme
-and made available through OpenWetWare.org - the free biology wiki
-. Adapted to FI-UNAM by Jesús Velázquez & Marco Ruiz.
-
+and made available through OpenWetWare.org - the free biology wiki. Adapted to UNAM by Jesús Velázquez
 
 
 Lista de paquetes
@@ -36,10 +34,34 @@ Recomiendo tener la opción "Install packages on the fly" de su distribución de
     \usepackage[nottoc]{tocbibind}
     \usepackage{titlesec}
 
-Compilación
+Portada
 -----------
+Existen dos versiones de la portada, una en color negro y otra azul y oro. Para escoger la portada en negro, hay que descomentar la línea:
+    \portadafalse
+y comentar la línea 
+    \portadatrue
+    
+Los datos van en los siguientes campos:
+    \title{Título de la tesis}
+    \author{Nombres Apellido1 Apellido2} 
+    \facultad{Facultad de Algunacosa}                
+    \degree{Ingenierx/Licenciadx en Algo}
+    \director{Dr. Emmet L. Brown}               
+    \degreedate{2112}                           
+    \lugar{Ciudad de México}       
+    
+    
+  
+Y el escudo de la facultad va en el campo \escudofacultad{ } donde se debe incluir la ruta y el nombre de la imagen correspondiente. Actualmente, la carpeta Latex/Classes/Escudos cuenta con los siguientes escudos:
 
-Por el momento, sólo funciona si compilan con "PDFLaTeX", aún no tiene funcionalidad completa con otros compiladores.
+    "fi_azul" Facultad de ingenieria en color azul
+    "fi_negro" Facultad de ingenieria en color negro
+    "fc_azul" Facultad de ciencias en color azul
+    "fc_negro" Facultad de ciencias en color negro
+
+Se agradecen sus aportaciones de escudos a jebus.velazquez@gmail.com o a este Git.
+
+
 
 Opciones para el posgrado
 --------
@@ -49,8 +71,8 @@ Para empezar, se debe tener el comando
 
 La portada tiene dos nuevos elementos: programa y campo, rellenar al gusto
 
-    \programa{Programa de Maestría y Doctorado en Ingeniería}
-    \campo{Ingeniería Eléctrica - Control}
+    \programa{Programa de Maestría y Doctorado en XXX}
+    \campo{Campo de Conocimiento}
     
 El siguiente comando activa la opción de poner hasta dos tutores que conformen el comité tutor
 
@@ -67,6 +89,10 @@ Para los datos del jurado asignado, se tiene
     \supdos{Suplente 2}
     \institucion{el lugar donde se hizo la tesis}
     
+    
+Compilación
+-----------
+Por el momento, sólo funciona si compilan con "PDFLaTeX", aún no tiene funcionalidad completa con otros compiladores.
     
 Warnings
 --------
