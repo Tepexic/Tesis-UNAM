@@ -1,16 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                         FORMATO DE TESIS FI UNAM                             %
+%                         FORMATO DE TESIS UMSNH                               %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % based on Harish Bhanderi's PhD/MPhil template, then Uni Cambridge
 % http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/
 % corrected and extended in 2007 by Jakob Suckale, then MPI-iCBG PhD programme
 % and made available through OpenWetWare.org - the free biology wiki
+% forked from https://github.com/Tepexic/Tesis-UNAM on July 2017
+% modifications made by Arturo Lopez Pineda
 
 %                     Under GNU License v3
 
-% ADAPTADO PARA FI-UNAM:  @Tepexic
+% ADAPTADO PARA UMSNH:  @arturolp
 
-\documentclass[twoside,11pt]{Latex/Classes/PhDthesisPSnPDF}
+\documentclass[twoside,11pt]{Latex/Classes/thesisUMSNH}
 %         PUEDEN INCLUIR EN ESTE ESPACIO LOS PAQUETES EXTRA, O BIEN, EN EL ARCHIVO "PhDthesisPSnPDF.cls" EN "./Latex/Classes/"
 \usepackage{blindtext}                        % Para insertar texto dummy, de ejemplo, pues.
 \usepackage[round, sort, numbers]{natbib}  % Personalizar la bibliografía a gusto de cada quien
@@ -27,20 +29,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                   DATOS                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Título de la tesis}
-\author{Nombres Apellido1 Apellido2} 
-\facultad{Facultad de Algunacosa}                 % Nombre de la facultad/escuela
-\escudofacultad{Latex/Classes/Escudos/fi_azul} % Aquí ponen la ruta y nombre del escudo de su facultad, actualmente, la carpeta Latex/Classes/Escudos cuenta con los siguientes escudos:
+\title{Caracterización molecular, clínica y epidemiológica de cáncer de mama en el Hospital Regional No. 1 en Charo, Michoacán}
+\author{Mario Felipe Rodríguez Morán} 
+\facultad{Facultad de Ciencias Médicas y Biológicas \break``Dr. Ignacio Chávez"}                 % Nombre de la facultad/escuela
+\escudofacultad{Latex/Classes/Escudos/fmed_grande} % Aquí ponen la ruta y nombre del escudo de su facultad, actualmente, la carpeta Latex/Classes/Escudos cuenta con los siguientes escudos:
 % "fi_azul" Facultad de ingenieria en color azul
 % "fi_negro" Facultad de ingenieria en color negro
 % "fc_azul" Facultad de ciencias en color azul
 % "fc_negro" Facultad de ciencias en color negro
 % Se agradecen sus aportaciones de escudos a jebus.velazquez@gmail.com
 
-\degree{Ingenierx/Licenciadx en Algo}        % Carrera
-\director{Dr. Emmet L. Brown}               % Director de tesis
-\degreedate{2112}                           % Año de la fecha del examen
-\lugar{Ciudad de México}                        % Lugar
+\degree{Médico Cirujano y Partero}       % Carrera
+\director{Dr. y M.C.M Cleto Álvarez Aguilar}                   % Director de tesis
+\tutor{Ph.D. Arturo López Pineda }
+\degreedate{2017}                                     % Año de la fecha del examen
+\lugar{Morelia, Michoacán}                        % Lugar
 
 %\portadafalse                              % Portada en NEGRO, descomentar y comentar la línea siguiente si se quiere utilizar
 \portadatrue                                % Portada en COLOR
