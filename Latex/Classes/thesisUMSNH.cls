@@ -463,7 +463,7 @@
 
 	    \vspace{0.5cm}
 
-    	{\small TUTOR:\\ {\@tutor}}
+    	%{\small TUTOR:\\ {\@tutor}}
 
 	    \vspace{1cm}
 
