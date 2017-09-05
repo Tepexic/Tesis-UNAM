@@ -58,11 +58,11 @@
 {\Huge} % por defecto se usarán caracteres de tamaño \Huge en negrita
 {% contenido de la etiqueta
 \titlerule % línea horizontal
-\filleft % texto alineado a la derecha
+\filright % texto alineado a la derecha
 \Large\chaptertitlename\ % "Capítulo" o "Apéndice" en tamaño \Large en lugar de \Huge
 \Large\thechapter} % número de capítulo en tamaño \Large
 {0mm} % espacio mínimo entre etiqueta y cuerpo
-{\filleft} % texto del cuerpo alineado a la derecha
+{\filright} % texto del cuerpo alineado a la derecha
 [\vspace{0.5mm} \bigrule] % después del cuerpo, dejar espacio vertical y trazar línea horizontal gruesa
 
 
@@ -275,6 +275,8 @@
 %Definiendo al director de tesis:
 \newcommand{\@director}{}
 \newcommand{\director}[1]{\renewcommand{\@director}{#1}}
+\newcommand{\@tutor}{}
+\newcommand{\tutor}[1]{\renewcommand{\@tutor}{#1}}
 \newcommand{\@ctutoruno}{}
 \newcommand{\ctutoruno}[1]{\renewcommand{\@ctutoruno}{#1}}
 \newcommand{\@ctutordos}{}
@@ -402,13 +404,13 @@
 	\begin{minipage}[c][10cm][s]{3cm}
 	  \begin{center}
 	    \ifportada
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[10pt]
+	        \includegraphics[height=2.2cm]{Latex/Classes/Escudos/umsnh-color}\\[10pt]
     	    \hskip2pt\colorvrule{Azul}{2.5pt}{13cm}
         	\hskip -0.4mm
 	        \colorvrule{Oro}{1pt}{13cm}\\[10pt]
 	        \includegraphics[height=2.6cm]{\@escudofacultad}
 	    \else
-	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/unam_negro_5x5cm}\\[10pt]
+	        \includegraphics[height=2.6cm]{Latex/Classes/Escudos/umsnh-blanco-negro}\\[10pt]
 	        \hskip2pt\vrule width2.5pt height13cm
     	    \hskip1mm
 	        \vrule width1pt height13cm\\[10pt]
@@ -418,10 +420,10 @@
 	  \end{center}
 	\end{minipage}\quad
 	%% Barra derecha - Títulos
-	\begin{minipage}[c][9.5cm][s]{11cm}
+	\begin{minipage}[c][9.5cm][s]{12cm}
 	  \begin{center}
     	% Barra superior
-	    {\large \scshape Universidad Nacional Autónoma de México}
+	    {\large \scshape Universidad Michoacana de San Nicolás de Hidalgo}
     	\vspace{.3cm}
 	    \ifportada
         	%\hrule height2.5pt
@@ -457,11 +459,11 @@
 
 	    \vspace{1.5cm}
 
-    	{\small TUTOR:\\ {\@director}}
+    	{\small DIRECTOR:\\ {\@director}}
 
 	    \vspace{0.5cm}
 
-    	%{\small CODIRECTOR DE TESIS:\\ en caso de que aplique}
+    	%{\small TUTOR:\\ {\@tutor}}
 
 	    \vspace{1cm}
 
