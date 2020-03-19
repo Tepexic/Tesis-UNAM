@@ -20,17 +20,13 @@
 \fi
 
 %:------------------------- PAQUETES  -----------------------
-\usepackage{amssymb, amsmath, amsbsy, amsfonts}    % ECUACIONES Y SÍMBOLOS MATEMÁTICOS
 \usepackage[utf8]{inputenc}              % CODIFICACIÓN UTF8, PARA Ñs Y ACENTOS Y DEMÁS
-\usepackage{listings}                    % PERMITE AGREGAR CÓDIGO DE LENGUAJES  DE PROGRAMACIÓN (DOCUMENTACIÓN EN GOOGLE)
 \usepackage{emptypage}                   % QUITA LOS ENCABEZADOS Y PIES DE PÁGINA EN LAS HOJAS VACÍAS PRODUCIDAS POR LA IMPRESIÓN A DOS CARAS
 \usepackage{wrapfig}                    % to include figure with text wrapping around it
 \usepackage[margin=10pt,font=small,labelfont=bf]{caption} % for improved layout of figure captions with extra margin, smaller font than text
 \usepackage[bf,SL,BF]{subfigure}         % Permite crear figuras múltiples
 \usepackage{makeidx}                     % Contiene los macros para indexar en un glosario
 %\usepackage[style=list,toc,number=none]{glossary}
-\usepackage{mathdots}                    % para el comando \iddots
-\usepackage{mathrsfs}                    % para formato de letra en ecuaciones
 \raggedbottom                            %Evita que LaTeX distribuya los espacios en blanco sobre la página, en lugar de eso los envía al fondo
 \usepackage{fancyhdr}                    % for better header layout
 \usepackage{eucal}
