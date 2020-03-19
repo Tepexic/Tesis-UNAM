@@ -101,3 +101,8 @@ Marca varias advertencias al compilar, varias de ellas tienen que ver con que el
 Si les da una advertencia de referencias no definidas, compilen el archivo "tesis.tex" con BibTeX.
 
 Las adevrtencias de fuera de margen son de la portada.
+
+
+Clase de la UMSNH
+--------
+Cambiar `\documentclass[twoside,11pt]{Latex/Classes/PhDthesisPSnPDF}` por `\documentclass[twoside,11pt]{Latex/Classes/thesisUMSNH}`
