@@ -259,6 +259,9 @@
 \newcommand{\@facultad}{}
 \newcommand{\facultad}[1]{\renewcommand{\@facultad}{#1}}
 
+\newcommand{\@colegio}{}
+\newcommand{\colegio}[1]{\renewcommand{\@colegio}{#1}}
+
 % The name of your University
 \newcommand{\@university}{}
 \newcommand{\university}[1]{\renewcommand{\@university}{#1}}
@@ -325,7 +328,7 @@
        {\if@restonecol\twocolumn\else\newpage\fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%            PORTADA de la UMSNH                                                             %
+%            PORTADA                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand{\maketitle}{%
@@ -334,7 +337,7 @@
 	\thispagestyle{empty}	
 	\begin{center}
 	\includegraphics[height=3cm]{Latex/Classes/Escudos/unam_azul_5x5cm}\\[8mm]
-	{\bfseries UNIVERSIDAD~MICHOACANA~DE~SAN~NICOLÁS~DE~HIDALGO}\\
+	{\bfseries UNIVERSIDAD~NACIONAL~AUTÓNOMA~DE~MÉXICO}\\
 	{\MakeUppercase {\@programa}}\\
 	{\MakeUppercase {\@campo}}\\[20mm]
 	{\Large \scshape {\@title}} \\[20mm]
@@ -431,8 +434,7 @@
        	 	\hrule height1pt
     	\fi
     	\vspace{.3cm}
-    	{\scshape  \@facultad}
-
+    	{\scshape \@facultad}
     	\vspace{.3cm}
 
 
