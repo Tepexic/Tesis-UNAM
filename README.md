@@ -93,7 +93,16 @@ Para los datos del jurado asignado, se tiene
 Compilación
 -----------
 Por el momento, sólo funciona si compilan con "PDFLaTeX", aún no tiene funcionalidad completa con otros compiladores.
+
+Cambiar colores
+--------
+En el archivo \Latex\Macros\MacroFile1.tex, se pueden cambiar los valores de RGB del azul y oro, modificando estas lineas:
+
+    \definecolor{Azul}{RGB}{0,3,84}
+    \definecolor{Oro}{RGB}{137,118,75}
     
+Es importante conservar los nombres de las variables 'Azul' y 'Oro', para evitar hacer más cambios. Solo modifica los valores de RGB.
+
 Warnings
 --------
 Marca varias advertencias al compilar, varias de ellas tienen que ver con que el paquete Blindtext no tiene funcionalidad para la lengua española, este paquete únicamente se usa para rellenar la plantilla con texto de ejemplo, por lo que al remover los comandos \blindtext se corrige.
